@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maxwell the Cat</title>
+    <link rel="icon" href="maxwell.gif" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const video = document.querySelector('video');
+            const audio = document.querySelector('audio');
+            document.body.addEventListener('click', function() {
+                if (audio.paused) {
+                    audio.play();
+                }
+            });
+            video.addEventListener('mouseenter', function() { video.src = "hover-video.mp4"; });
+            video.addEventListener('mouseleave', function() { video.src = "faster-video.mp4"; });
+        });
+    </script>
+</head>
+<body>
+    <h1>Maxwell the Cat</h1>
+    
+    <video id="mainVideo" autoplay loop muted playsinline>
+        <source src="faster-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <span class="video-caption">HE JUST DOESN'T STOP SPINNING</span>
+    
+    <div class="audio-instruction">CLICK TO HEAR THE SPINCAT ANTHEM</div>
+    <div class="additional-text">CA: PUPLWzMfACfkSDe2btZg2axsxum2fvfM5tjKjHQJFnu</div>
+    <div class="content-container">
+        <div class="image-with-text">
+            <a href="https://t.co/sgGCnEPqAl" target="_blank" class="social-link">
+                <img src="telegram.png" class="social-icon"> 
+                <span>Telegram</span>
+            </a>
+            <a href="https://twitter.com/spincatonsol" target="_blank" class="social-link">
+                <img src="twitter.png" class="social-icon">
+                <span>Twitter</span>
+            </a>
+            <a href="https://www.dextools.io/app/en/solana/pair-explorer/8mArRDvVsV4BVJAskV5Gu2nJM43gsAZS1rqQ1pzxT8Vh?t=1711985179417" target="_blank" class="social-link">
+                <img src="growth.png" class="social-icon">
+                <span>Chart</span>
+            </a>
+            <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=PUPLWzMfACfkSDe2btZg2axsxum2fvfM5tjKjHQJFnu&fixed=in" target="_blank" class="social-link">
+                <img src="dollar-symbol.png" class="social-icon">
+                <span>Buy SPINCAT</span>
+            </a>
+        </div>
+    </div>
+    
+    
+    <audio src="anthem.mp3" loop></audio>
+    <script src="script.js"></script>
+</body>
+</html>
